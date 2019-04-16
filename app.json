@@ -1,0 +1,8 @@
+{
+    "name": "PrfNodeJSHerokuExample",
+    "description": "Quick Example for PRF course",
+    "repository": "https://github.com/ZooLeeCoding/2019PrfPeldaDeploy",
+    "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+    "keywords": ["node", "express", "heroku"],
+    "image": "heroku/nodejs"
+  }
