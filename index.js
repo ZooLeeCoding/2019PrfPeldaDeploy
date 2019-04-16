@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000
 var app = express();
 
 // npm install cors --save
-app.use(cors());
+//app.use(cors());
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
