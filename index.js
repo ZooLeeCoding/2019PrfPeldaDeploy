@@ -18,6 +18,7 @@ var app = express();
 app.use(cors());
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json())
 app.use(cookieParser());
 
 passport.use('local', new LocalStrategy.Strategy(function(
@@ -45,7 +46,7 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')))
 .set('views', path.join(__dirname, 'views'))
 .set('view engine', 'ejs')
-.get('/public', (req, res) => res.render('pages/index'))
+.get('/', (req, res) => res.render('pages/index'))
 
 app.use('/', require('./routes'));
 
