@@ -8,6 +8,9 @@ var LocalStrategy = require('passport-local');
 /* npm install --save body-parser cookie-parser express-session
       passport passport-local */
 
+const path = require('path')
+const PORT = process.env.PORT || 5000
+
 var app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -37,7 +40,7 @@ app.use(passport.session());
 
 app.use('/', require('./routes'));
 
-app.listen(5000, function() {
+app.listen(PORT, function() {
     console.log('app is listening');
 });
 
